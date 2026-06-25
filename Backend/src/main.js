@@ -125,3 +125,21 @@ app.get(
 app.listen(port, () => {
   console.log(`Server is running on port http://localhost:${port}`);
 });
+
+/* 
+
+/api/auth => Trabaja todo lo relacionado a autentificacion 
+/api/workspace => Trabaja todo lo relacionado a workspaces
+    /:workspace_id/members => Todo lo relacionado a membresias
+    /:workspace_id/channels => Todo lo relacionado a canales
+        /:channel_id/messages => Todo lo relacionado a mensajes
+    /:workspace_id/contacts
+
+
+Crear mensaje: 
+    POST /api/workspaces/:workspace_id/channels/:channel_id/messages
+    authMiddleware
+    verifyWorkspaceMiddleware
+    verifyChannelMiddleware
+    messagesController.create()
+*/
