@@ -18,7 +18,7 @@ function authMiddleware(request, response, next) {
     // ya recibe los datos firmados y los verifica que esten realmente firmados
     const user_info = jwt.verify(authorization_token, ENVIRONMENT.JWT_SECRET);
     //Estamos guardando la informacion del usuario dentro de la request
-    request.user = user_info;
+    request.user = user_info; // datos del usuario logueado id
     console.log(user_info);
     //console.log("SE ACTIVO EL MIDDLEWARE");
 

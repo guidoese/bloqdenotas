@@ -6,8 +6,6 @@ import { RegisterScreen } from "./Screens/RegisterScreen/RegisterScreen";
 import { Navigate } from "react-router";
 
 const App = () => {
-  const a = 0;
-
   return (
     <Routes>
       <Route path="/login" element={<LoginScreen />} />

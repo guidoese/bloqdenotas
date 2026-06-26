@@ -3,6 +3,7 @@ import connectMongoDB from "./config/mongodb.config.js";
 import express from "express";
 import authRouter from "./routes/auth.router.js";
 import workspaceRouter from "./routes/workspace.router.js";
+import notesRouter from "./routes/notes.router.js";
 /* SOLO EN LOCAL Y SI TENER PROBLEMAS DE DNS PARA CONECTARTE A MONGODB */
 import dns from "dns";
 import authMiddleware from "./middlewares/auth.middleware.js";
@@ -46,6 +47,9 @@ app.use(express.json());
 app.use("/api/auth", authRouter);
 
 app.use("/api/workspace", workspaceRouter);
+
+app.use("/api/notes", notesRouter);
+
 /* 
 Ruta: /api/workspace
 
